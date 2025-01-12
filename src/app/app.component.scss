@@ -1,8 +1,44 @@
+@use "../variables.scss" as v;
+@use "../mixins.scss" as m;
+
 .mat-drawer-container {
-    height: 100vh;
+  height: 100vh;
+
+  .sidenav {
+    width: 300px;
+
+    .logo-container {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      padding: 0px 16px;
+      min-height: 56px;
+      @include m.flexBox();
+    }
+
+    .menu-items {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0;
+
+      li {
+        padding: 0px 16px;
+        height: 48px;
+        @include m.flexBox(row, flex-start, center);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+      }
+    }
+  }
 }
 
 .menu-icon {
-    cursor: pointer;
-    margin-right: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.mat-toolbar {
+  height: 56px;
+  min-height: 56px;
 }
