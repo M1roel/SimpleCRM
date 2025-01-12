@@ -25,6 +25,12 @@ import { User } from '../models/user.class';
 export class DialogAddUserComponent {
 
   user = new User;
+  birthDate: Date = new Date;
 
   constructor() {}
+
+  saveUser() {
+    this.user.birthDate = this.birthDate.getTime();
+    console.log('Current user is', this.user);
+  }
 }
