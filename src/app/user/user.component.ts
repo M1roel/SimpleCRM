@@ -12,7 +12,9 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
 })
+
 export class UserComponent {
+
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
