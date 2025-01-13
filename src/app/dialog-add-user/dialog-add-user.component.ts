@@ -8,18 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.class';
 
 @Component({
-  selector: 'app-dialog-add-user',
-  standalone: true,
-  imports: [
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    FormsModule
-  ],
-  templateUrl: './dialog-add-user.component.html',
-  styleUrl: './dialog-add-user.component.scss',
+    selector: 'app-dialog-add-user',
+    imports: [
+        MatDialogModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        FormsModule
+    ],
+    templateUrl: './dialog-add-user.component.html',
+    styleUrl: './dialog-add-user.component.scss'
 })
 
 export class DialogAddUserComponent {

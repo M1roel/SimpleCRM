@@ -8,20 +8,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatIconModule,
-    RouterModule,
-    MatButtonModule,
-    MatNativeDateModule
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        RouterOutlet,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatIconModule,
+        RouterModule,
+        MatButtonModule,
+        MatNativeDateModule
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'SimpleCRM';

@@ -7,11 +7,10 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
 import { User } from '../models/user.class';
 
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.scss',
+    selector: 'app-user',
+    imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule],
+    templateUrl: './user.component.html',
+    styleUrl: './user.component.scss'
 })
 
 export class UserComponent {
