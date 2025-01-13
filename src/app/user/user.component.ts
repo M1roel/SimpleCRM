@@ -5,11 +5,13 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-user',
   standalone: true,
   imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule],
+  providers: [AngularFirestore],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
 })
