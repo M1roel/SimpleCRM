@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.class';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Inject } from '@angular/core';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -18,7 +19,8 @@ import { Inject } from '@angular/core';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule
   ],
   templateUrl: './dialog-add-user.component.html',
   styleUrl: './dialog-add-user.component.scss',
