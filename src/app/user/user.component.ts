@@ -21,7 +21,7 @@ export class UserComponent implements OnInit {
   user = new User();
   allUsers: any[] = [];
 
-  constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) {}
+  constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) { }
 
   ngOnInit(): void {
     const usersCollection = collection(this.firestore, 'users');
