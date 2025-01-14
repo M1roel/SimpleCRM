@@ -1,30 +1,38 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { MatCard, MatCardModule } from '@angular/material/card';
+import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatCardModule],
-  providers: [AngularFirestore],
+  imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatCardModule, CommonModule],
   templateUrl: './user.component.html',
-  styleUrl: './user.component.scss',
+  styleUrls: ['./user.component.scss'],
 })
 
-export class UserComponent {
+export class UserComponent implements OnInit {
+  user = new User();
+  allUsers: any[] = [];
 
-  user = new User;
+  constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) {}
 
-  constructor(public dialog: MatDialog) {}
+  ngOnInit(): void {
+    const usersCollection = collection(this.firestore, 'users');
+
+    collectionData(usersCollection).subscribe((changes: any) => {
+      console.log('Received changes from DB', changes);
+      this.allUsers = changes;
+    });
+  }
 
   openDialog() {
-    this.dialog.open(DialogAddUserComponent, {
-    });
+    this.dialog.open(DialogAddUserComponent, {});
   }
 }
