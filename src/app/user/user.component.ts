@@ -26,7 +26,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     const usersCollection = collection(this.firestore, 'users');
 
-    collectionData(usersCollection).subscribe((changes: any) => {
+    collectionData(usersCollection, { idField: 'id' }).subscribe((changes: any) => {
       console.log('Received changes from DB', changes);
       this.allUsers = changes;
     });
