@@ -6,11 +6,12 @@ import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { MatCard, MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule],
+  imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatCardModule],
   providers: [AngularFirestore],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',

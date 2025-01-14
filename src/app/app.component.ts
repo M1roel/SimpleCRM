@@ -6,6 +6,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     RouterModule,
     MatButtonModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCardModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
