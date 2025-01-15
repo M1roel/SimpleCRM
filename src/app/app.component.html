@@ -2,9 +2,41 @@
   <mat-drawer #drawer class="sidenav" [opened]="true" mode="side">
     <div class="logo-container">PLATZ FÜR LOGO</div>
     <ul class="menu-items">
-      <li routerLink="/"><mat-icon>fact_check</mat-icon>Dashboard</li>
-      <li routerLink="/user"><mat-icon>perm_identity</mat-icon>User</li>
-    </ul>
+      <li routerLink="/">
+        <mat-icon>dashboard</mat-icon>Dashboard
+      </li>
+      <li routerLink="/user">
+        <mat-icon>perm_identity</mat-icon>User
+      </li>
+      <li [matMenuTriggerFor]="orMenu">
+        <mat-icon>vaccines</mat-icon>OR
+      </li>
+      <mat-menu #orMenu="matMenu">
+        <button mat-menu-item routerLink="/or/schedule">
+          <mat-icon>calendar_today</mat-icon>Schedule
+        </button>
+        <button mat-menu-item routerLink="/or/resources">
+          <mat-icon>inventory</mat-icon>Resources
+        </button>
+        <button mat-menu-item routerLink="/or/statistics">
+          <mat-icon>bar_chart</mat-icon>Statistics
+        </button>
+      </mat-menu>
+      <li [matMenuTriggerFor]="cssdMenu">
+        <mat-icon>content_cut</mat-icon>CSSD
+      </li>
+      <mat-menu #cssdMenu="matMenu">
+        <button mat-menu-item routerLink="/cssd/inventory">
+          <mat-icon>list</mat-icon>Inventory
+        </button>
+        <button mat-menu-item routerLink="/cssd/processes">
+          <mat-icon>sync</mat-icon>Processes
+        </button>
+        <button mat-menu-item routerLink="/cssd/reports">
+          <mat-icon>description</mat-icon>Reports
+        </button>
+      </mat-menu>
+    </ul>    
   </mat-drawer>
 
   <div class="sidenav-content">
