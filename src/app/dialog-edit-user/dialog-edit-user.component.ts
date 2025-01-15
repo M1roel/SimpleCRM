@@ -7,7 +7,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.class';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, doc, updateDoc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
@@ -31,26 +31,38 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
 export class DialogEditUserComponent {
   loading = false;
   user = new User;
-  birthDate: Date = new Date;
+  birthDate: Date = new Date;  
+  userId = '';
   constructor(@Inject(Firestore) private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddUserComponent>) {}
 
   saveUser() {
+    if (!this.userId) {
+      console.error('No userId found for updating the user data.');
+      return;
+    }
+  
     this.user.birthDate = this.birthDate.getTime();
   
-    const userData = { ...this.user };
+    const updatedData = {
+      firstName: this.user.firstName,
+      lastName: this.user.lastName,
+      email: this.user.email,
+      birthDate: this.user.birthDate,
+    };
   
-    console.log('Current user is', userData);
     this.loading = true;
   
-    const usersCollection = collection(this.firestore, 'users');
-    addDoc(usersCollection, userData)
-      .then((result) => {
-        console.log('Adding user finished', result);
+    const userDocRef = doc(this.firestore, `users/${this.userId}`);
+  
+    updateDoc(userDocRef, updatedData)
+      .then(() => {
+        console.log('User data updated successfully');
         this.loading = false;
         this.dialogRef.close();
       })
       .catch((error) => {
-        console.error('Error adding user:', error);
+        console.error('Error updating user data:', error);
+        this.loading = false;
       });
   }
 }

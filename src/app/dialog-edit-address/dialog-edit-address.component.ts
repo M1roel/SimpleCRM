@@ -7,7 +7,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '../models/user.class';
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+import { Firestore, doc, updateDoc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
@@ -32,26 +32,34 @@ export class DialogEditAddressComponent {
 
   loading = false;
   user = new User;
-  birthDate: Date = new Date;
+  userId = '';
+
   constructor(@Inject(Firestore) private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddUserComponent>) {}
 
   saveUser() {
-    this.user.birthDate = this.birthDate.getTime();
+    if (!this.userId) {
+      console.error('No userId found for updating the address.');
+      return;
+    }
   
-    const userData = { ...this.user };
+    const userDocRef = doc(this.firestore, `users/${this.userId}`);
+    const updatedData = { 
+      street: this.user.street, 
+      zipCode: this.user.zipCode, 
+      city: this.user.city 
+    };
   
-    console.log('Current user is', userData);
     this.loading = true;
   
-    const usersCollection = collection(this.firestore, 'users');
-    addDoc(usersCollection, userData)
-      .then((result) => {
-        console.log('Adding user finished', result);
+    updateDoc(userDocRef, updatedData)
+      .then(() => {
+        console.log('User address updated successfully');
         this.loading = false;
         this.dialogRef.close();
       })
       .catch((error) => {
-        console.error('Error adding user:', error);
+        console.error('Error updating user address:', error);
+        this.loading = false;
       });
   }
 }
