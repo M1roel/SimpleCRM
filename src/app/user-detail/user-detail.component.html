@@ -1,8 +1,8 @@
 <mat-card class="user-detail-header">
   <img src="../../assets/img/user.png" alt="user icon" />
   <div class="user-details">
-    <h2>Peter Pfautsch</h2>
-    <span>eMail: ppfautsch(at)yahoo.de</span>
+    <h2>{{ user.firstName}} {{ user.lastName}}</h2>
+    <span>{{ user.email }}</span>
   </div>
 </mat-card>
 
@@ -10,5 +10,8 @@
   <mat-card-header>
     <mat-card-title> Address </mat-card-title>
   </mat-card-header>
-  <mat-card-content> </mat-card-content>
+  <mat-card-content> 
+    {{ user.street }} <br>
+    {{ user.zipCode}} {{ user.city }}
+  </mat-card-content>
 </mat-card>
