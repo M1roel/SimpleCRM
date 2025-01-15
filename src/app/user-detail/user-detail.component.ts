@@ -4,11 +4,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Firestore, doc, docData } from '@angular/fire/firestore';
 import { MatCardModule } from '@angular/material/card';
 import { User } from '../models/user.class';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu'
 
 @Component({
   selector: 'app-user-detail',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule, MatIconModule, MatButtonModule, MatMenuModule],
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss']
 })
@@ -40,5 +43,9 @@ export class UserDetailComponent implements OnInit {
     } else {
       console.error('No userId found');
     }
+  }
+
+  openAddressDialog() {
+
   }
 }

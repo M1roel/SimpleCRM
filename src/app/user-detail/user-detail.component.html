@@ -7,6 +7,14 @@
 </mat-card>
 
 <mat-card class="mt-32">
+  <button mat-icon-button class="user-detail-btn" [matMenuTriggerFor]="addressMenu" (click)="openAddressDialog()">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <mat-menu #addressMenu="matMenu">
+    <button mat-menu-item>Edit</button>
+  </mat-menu>
+
   <mat-card-header>
     <mat-card-title> Address </mat-card-title>
   </mat-card-header>
