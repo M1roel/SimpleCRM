@@ -6,6 +6,12 @@
   padding: 16px;
   @include m.flexBox(row, flex-start, flex-end);
 
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
   img {
     height: 100px;
     width: 100px;
@@ -26,7 +32,7 @@
 
 .mt-32 {
   button {
-    position: absolute !important;
+    position: absolute;
     right: 0;
     top: 0;
   }

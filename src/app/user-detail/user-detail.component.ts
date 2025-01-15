@@ -6,7 +6,9 @@ import { MatCardModule } from '@angular/material/card';
 import { User } from '../models/user.class';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu'
+import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -46,6 +48,10 @@ export class UserDetailComponent implements OnInit {
   }
 
   openAddressDialog() {
+    this.dialog.open(DialogEditAddressComponent);
+  }
 
+  openUserEditDialog() {
+    this.dialog.open(DialogEditUserComponent);
   }
 }
