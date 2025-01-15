@@ -1,0 +1,25 @@
+@use "../../variables.scss" as v;
+@use "../../mixins.scss" as m;
+
+.user-detail-header {
+    height: 250px;   
+    padding: 16px; 
+    @include m.flexBox(row, flex-start, flex-end);
+
+    img {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .user-details {
+        height: 100px;
+        margin-left: 32px;
+        @include m.flexBox (column, center, flex-start);
+
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+}
