@@ -1,0 +1,19 @@
+{
+    "SIDENAV": {
+      "DASHBOARD": "Dashboard",
+      "USER": "User",
+      "OR": {
+        "TITLE": "Operating Room",
+        "SCHEDULE": "Schedule",
+        "RESOURCES": "Resources",
+        "STATISTICS": "Statistics"
+      },
+      "CSSD": {
+        "TITLE": "CSSD",
+        "INVENTORY": "Inventory",
+        "PROCESSES": "Processes",
+        "REPORTS": "Reports"
+      }
+    }
+  }
+  

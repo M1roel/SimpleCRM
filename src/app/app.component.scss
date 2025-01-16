@@ -26,11 +26,11 @@
         cursor: pointer;
 
         &:hover {
-            background-color: rgba(0, 0, 0, 0.075);
+          background-color: rgba(0, 0, 0, 0.075);
         }
 
         mat-icon {
-           margin-right: 16px; 
+          margin-right: 16px;
         }
       }
     }
@@ -52,3 +52,24 @@
   padding-right: 56px;
   padding-top: 16px;
 }
+
+.sidenav-content {
+  .mat-toolbar {
+    @include m.flexBox(row, space-between, center);
+
+    .mat-toolbar-left {
+      @include m.flexBox();
+    }
+
+      .lang-change {
+        @include m.flexBox();
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+

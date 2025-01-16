@@ -1,0 +1,19 @@
+{
+    "SIDENAV": {
+      "DASHBOARD": "Übersicht",
+      "USER": "Benutzer",
+      "OR": {
+        "TITLE": "Operationsraum",
+        "SCHEDULE": "Zeitplan",
+        "RESOURCES": "Ressourcen",
+        "STATISTICS": "Statistiken"
+      },
+      "CSSD": {
+        "TITLE": "Sterilgutversorgung",
+        "INVENTORY": "Inventar",
+        "PROCESSES": "Prozesse",
+        "REPORTS": "Berichte"
+      }
+    }
+  }
+  
