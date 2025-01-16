@@ -1,10 +1,10 @@
 <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<h2 mat-dialog-title>Add user</h2>
+<h2 mat-dialog-title>{{ "EDIT_USER.TITLE" | translate }}</h2>
 <mat-dialog-content>
   <div>
     <mat-form-field class="mr-16" appearance="outline">
-      <mat-label>First name</mat-label>
+      <mat-label>{{ "EDIT_USER.FNAME" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.firstName"
@@ -15,7 +15,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>Last name</mat-label>
+      <mat-label>{{ "EDIT_USER.LNAME" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.lastName"
@@ -28,7 +28,7 @@
 
   <div>
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Email</mat-label>
+      <mat-label>{{ "EDIT_USER.MAIL" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.email"
@@ -41,7 +41,7 @@
 
   <div>
     <mat-form-field appearance="outline" class="full-width">
-      <mat-label>Birth date</mat-label>
+      <mat-label>{{ "EDIT_USER.BDAY" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="birthDate"
@@ -55,7 +55,7 @@
       ></mat-datepicker-toggle>
       <mat-datepicker #datepicker>
         <mat-datepicker-actions>
-          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-button matDatepickerCancel>{{ "EDIT_USER.CANCEL" | translate }}</button>
           <button mat-raised-button matDatepickerApply>Apply</button>
         </mat-datepicker-actions>
       </mat-datepicker>
@@ -69,7 +69,7 @@
       mat-dialog-close
       (click)="dialogRef.close()"
     >
-      Cancel
+    {{ "EDIT_USER.CANCEL" | translate }}
     </button>
     <button
       [disabled]="loading"
@@ -78,7 +78,7 @@
       cdkFocusInitial
       (click)="saveUser()"
     >
-      Save
+    {{ "EDIT_USER.SAVE" | translate }}
     </button>
   </mat-dialog-actions>
 </mat-dialog-content>

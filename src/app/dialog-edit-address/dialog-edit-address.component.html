@@ -1,10 +1,10 @@
 <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 
-<h2 mat-dialog-title>Edit address</h2>
+<h2 mat-dialog-title>{{ "EDIT_ADDRESS.TITLE" | translate }}</h2>
 <mat-dialog-content>
   <div>
     <mat-form-field class="full-width" appearance="outline">
-      <mat-label>Street + House No.</mat-label>
+      <mat-label>{{ "EDIT_ADDRESS.STREET" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.street"
@@ -17,7 +17,7 @@
 
   <div>
     <mat-form-field class="mr-16" appearance="outline">
-      <mat-label>Zip Code</mat-label>
+      <mat-label>{{ "EDIT_ADDRESS.ZIP" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.zipCode"
@@ -28,7 +28,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <mat-label>City</mat-label>
+      <mat-label>{{ "EDIT_ADDRESS.CITY" | translate }}</mat-label>
       <input
         [disabled]="loading"
         [(ngModel)]="user.city"
@@ -46,7 +46,7 @@
       mat-dialog-close
       (click)="dialogRef.close()"
     >
-      Cancel
+    {{ "EDIT_ADDRESS.CANCEL" | translate }}
     </button>
     <button
       [disabled]="loading"
@@ -55,7 +55,7 @@
       cdkFocusInitial
       (click)="saveUser()"
     >
-      Save
+    {{ "EDIT_ADDRESS.SAVE" | translate }}
     </button>
   </mat-dialog-actions>
 </mat-dialog-content>

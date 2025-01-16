@@ -9,13 +9,14 @@ import { RouterModule } from '@angular/router';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-user',
   standalone: true,
   imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatCardModule, CommonModule,
-    RouterModule],
+    RouterModule, TranslateModule],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
 })

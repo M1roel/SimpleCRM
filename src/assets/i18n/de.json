@@ -14,6 +14,42 @@
         "PROCESSES": "Prozesse",
         "REPORTS": "Berichte"
       }
+    },
+    "ADD_USER": {
+      "TITLE": "Benutzer hinzufügen",
+      "FNAME": "Vorname",
+      "LNAME": "Nachname",
+      "MAIL": "Email",
+      "BDAY": "Geburtstag",
+      "CANCEL": "Abbruch",
+      "SAVE": "Speichern",
+      "STREET": "Straße + Hausnummer",
+      "ZIP": "Postleitzahl",
+      "CITY": "Stadt"
+    },
+    "EDIT_ADDRESS": {
+      "TITLE": "Adresse bearbeiten",
+      "CANCEL": "Abbruch",
+      "SAVE": "Speichern",
+      "STREET": "Straße + Hausnummer",
+      "ZIP": "Postleitzahl",
+      "CITY": "Stadt"
+    },
+    "EDIT_USER": {
+      "TITLE": "Benutzer bearbeiten",
+      "FNAME": "Vorname",
+      "LNAME": "Nachname",
+      "MAIL": "Email",
+      "BDAY": "Geburtstag",
+      "CANCEL": "Abbruch",
+      "SAVE": "Speichern"
+    },
+    "USER_DETAIL": {
+      "EDIT": "Bearbeiten",
+      "ADDRESS": "Adresse"
+    },
+    "USER": {
+      "CITY": "Stadt"
     }
   }
   

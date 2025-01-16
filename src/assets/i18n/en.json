@@ -14,6 +14,42 @@
         "PROCESSES": "Processes",
         "REPORTS": "Reports"
       }
+    },
+    "ADD_USER": {
+      "TITLE": "Add user",
+      "FNAME": "First name",
+      "LNAME": "Last name",
+      "MAIL": "Email",
+      "BDAY": "Birthday",
+      "CANCEL": "Cancel",
+      "SAVE": "Save",
+      "STREET": "Street + House No.",
+      "ZIP": "Zip Code",
+      "CITY": "City"
+    },
+    "EDIT_ADDRESS": {
+      "TITLE": "Edit address",
+      "CANCEL": "Cancel",
+      "SAVE": "Save",
+      "STREET": "Street + House No.",
+      "ZIP": "Zip Code",
+      "CITY": "City"
+    },
+    "EDIT_USER": {
+      "TITLE": "Edit user",
+      "FNAME": "First name",
+      "LNAME": "Last name",
+      "MAIL": "Email",
+      "BDAY": "Birthday",
+      "CANCEL": "Cancel",
+      "SAVE": "Save"
+    },
+    "USER_DETAIL": {
+      "EDIT": "Edit",
+      "ADDRESS": "Address"
+    },
+    "USER": {
+      "CITY": "City"
     }
   }
   

@@ -4,7 +4,7 @@
   </button>
 
   <mat-menu #userMenu="matMenu">
-    <button mat-menu-item (click)="openUserEditDialog()">Edit</button>
+    <button mat-menu-item (click)="openUserEditDialog()">{{ "USER_DETAIL.EDIT" | translate }}</button>
   </mat-menu>
 
   <img src="../../assets/img/user.png" alt="user icon" />
@@ -20,11 +20,11 @@
   </button>
 
   <mat-menu #addressMenu="matMenu">
-    <button mat-menu-item (click)="openAddressDialog()">Edit</button>
+    <button mat-menu-item (click)="openAddressDialog()">{{ "USER_DETAIL.EDIT" | translate }}</button>
   </mat-menu>
 
   <mat-card-header>
-    <mat-card-title> Address </mat-card-title>
+    <mat-card-title> {{ "USER_DETAIL.ADDRESS" | translate }} </mat-card-title>
   </mat-card-header>
   <mat-card-content> 
     {{ user.street }} <br>

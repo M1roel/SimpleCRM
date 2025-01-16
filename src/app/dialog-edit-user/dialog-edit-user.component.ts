@@ -11,6 +11,7 @@ import { Firestore, doc, updateDoc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dialog-edit-user',
@@ -23,7 +24,8 @@ import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.compo
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    TranslateModule
   ],
   templateUrl: './dialog-edit-user.component.html',
   styleUrl: './dialog-edit-user.component.scss'
