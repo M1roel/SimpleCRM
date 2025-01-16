@@ -50,6 +50,26 @@
     },
     "USER": {
       "CITY": "City"
+    },
+    "SCHEDULE": {
+      "ROOM": "Surgery room",
+      "DOCTOR": "Surgeon",
+      "DATE": "Date of intervention"
+    },
+    "ADD_PATIENT": {
+      "TITLE": "Add patient",
+      "FNAME": "First name",
+      "LNAME": "Last name",
+      "MAIL": "Email",
+      "BDAY": "Birthday",
+      "CANCEL": "Cancel",
+      "SAVE": "Save",
+      "STREET": "Street + House No.",
+      "ZIP": "Zip Code",
+      "CITY": "City",
+      "ROOM": "Surgery room",
+      "DOCTOR": "Surgeon",
+      "DATE": "Date of intervention"
     }
   }
   

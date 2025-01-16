@@ -1,1 +1,28 @@
-<p>or-schedule works!</p>
+<mat-card>
+    <table class="patient-table">
+      <tr>
+        <th>Name</th>
+        <th>{{ "SCHEDULE.DOCTOR" | translate }}</th>
+        <th>{{ "SCHEDULE.ROOM" | translate }}</th>
+        <th>{{ "SCHEDULE.DATE" | translate }}</th>
+      </tr>
+      <tr *ngFor="let patient of allPatients" [routerLink]="['/patient/' + patient.id]">
+        <td>{{ patient.firstName }} {{ patient.lastName}}</td>
+        <td>{{ patient.doctor }}</td>
+        <td>{{ patient.room }}</td>
+        <td>{{ patient.date }}</td>
+      </tr>
+    </table>
+  </mat-card>
+  
+  <button
+    (click)="openDialog()"
+    class="add-patient-btn"
+    mat-fab
+    aria-label="button with a add icon"
+    matTooltip="Add patient"
+    matTooltipPosition="above"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+  

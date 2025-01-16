@@ -50,6 +50,26 @@
     },
     "USER": {
       "CITY": "Stadt"
+    },
+    "SCHEDULE": {
+      "ROOM": "OP-Saal",
+      "DOCTOR": "Operateur",
+      "DATE": "Eingriffsdatum"
+    },
+    "ADD_PATIENT": {
+      "TITLE": "Patient hinzufügen",
+      "FNAME": "Vorname",
+      "LNAME": "Nachname",
+      "MAIL": "Email",
+      "BDAY": "Geburtstag",
+      "CANCEL": "Abbruch",
+      "SAVE": "Speichern",
+      "STREET": "Straße + Hausnummer",
+      "ZIP": "Postleitzahl",
+      "CITY": "Stadt",
+      "ROOM": "OP-Saal",
+      "DOCTOR": "Operateur",
+      "DATE": "Eingriffsdatum"
     }
   }
   

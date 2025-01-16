@@ -1,0 +1,121 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+<h2 mat-dialog-title>{{ "ADD_PATIENT.TITLE" | translate }}</h2>
+<mat-dialog-content class="p-16">
+  <div>
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.FNAME" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.firstName"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.LNAME" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.lastName"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ "ADD_PATIENT.MAIL" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.email"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ "ADD_PATIENT.BDAY" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="birthDate"
+        matInput
+        [matDatepicker]="datepicker"
+      />
+      <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="datepicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>{{ "ADD_PATIENT.CANCEL" | translate }}</button>
+          <button mat-raised-button matDatepickerApply>{{ "ADD_PATIENT.SAVE" | translate }}</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.STREET" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.street"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.ZIP" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.zipCode"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.CITY" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.city"
+        matInput
+        placeholder=""
+      />
+      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <mat-dialog-actions>
+    <button
+      [disabled]="loading"
+      mat-button
+      mat-dialog-close
+      (click)="dialogRef.close()"
+    >
+    {{ "ADD_PATIENT.CANCEL" | translate }}
+    </button>
+    <button
+      [disabled]="loading"
+      mat-button
+      mat-dialog-close
+      cdkFocusInitial
+      (click)="savepatient()"
+    >
+    {{ "ADD_PATIENT.SAVE" | translate }}
+    </button>
+  </mat-dialog-actions>
+</mat-dialog-content>

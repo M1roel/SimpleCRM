@@ -1,0 +1,49 @@
+.add-patient-btn {
+    position: absolute;
+    bottom: 56px;
+    right: 56px;
+  }
+  
+  .patient-table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      &:first-child {
+        cursor: unset;
+  
+        &:hover {
+          background-color: unset;
+        }
+      }
+  
+      &:last-child {
+        border-bottom: 0;
+      }
+  
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+  
+      td {
+        height: 48px;
+  
+        &:first-child {
+          padding-left: 16px;
+        }
+      }
+  
+      th {
+        text-align: start;
+        color: rgb(255, 255, 255);
+        padding: 16px 0px;
+  
+        &:first-child {
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+  
