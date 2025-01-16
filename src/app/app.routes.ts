@@ -8,12 +8,14 @@ import { OrStatisticsComponent } from './or-statistics/or-statistics.component';
 import { CssdInventoryComponent } from './cssd-inventory/cssd-inventory.component';
 import { CssdProcessesComponent } from './cssd-processes/cssd-processes.component';
 import { CssdReportsComponent } from './cssd-reports/cssd-reports.component';
+import { PatientDetailComponent } from './patient-detail/patient-detail.component';
 
 export const routes: Routes = [
     {path: '', component: DashboardComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'user', component: UserComponent},
     {path: 'user/:id', component: UserDetailComponent},
+    {path: 'patients/:id', component: PatientDetailComponent},
     {path: 'or/schedule', component: OrScheduleComponent},
     {path: 'or/resources', component: OrResourcesComponent},
     {path: 'or/statistics', component: OrStatisticsComponent},

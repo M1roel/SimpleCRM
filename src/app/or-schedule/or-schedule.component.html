@@ -6,7 +6,7 @@
         <th>{{ "SCHEDULE.ROOM" | translate }}</th>
         <th>{{ "SCHEDULE.DATE" | translate }}</th>
       </tr>
-      <tr *ngFor="let patient of allPatients" [routerLink]="['/patient/' + patient.id]">
+      <tr *ngFor="let patient of allPatients" [routerLink]="['/patients/' + patient.id]">
         <td>{{ patient.firstName }} {{ patient.lastName}}</td>
         <td>{{ patient.doctor }}</td>
         <td>{{ patient.room }}</td>
