@@ -61,15 +61,14 @@
       @include m.flexBox();
     }
 
-      .lang-change {
-        @include m.flexBox();
-        cursor: pointer;
+    .lang-change {
+      @include m.flexBox(row, center, center);
+      cursor: pointer;
 
-        a {
-          text-decoration: none;
-          color: white;
-        }
+      a {
+        text-decoration: none;
+        color: white;
       }
     }
   }
-
+}
