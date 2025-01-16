@@ -11,7 +11,6 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -22,7 +21,6 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
   </div>
 
@@ -35,7 +33,6 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
   </div>
 
@@ -48,7 +45,6 @@
         matInput
         [matDatepicker]="datepicker"
       />
-      <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
       <mat-datepicker-toggle
         matIconSuffix
         [for]="datepicker"
@@ -71,7 +67,6 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
   </div>
 
@@ -84,7 +79,6 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -95,7 +89,50 @@
         matInput
         placeholder=""
       />
-      <!-- <mat-hint>Please enter a name</mat-hint> -->
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field class="mr-16" appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.DOCTOR" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.doctor"
+        matInput
+        placeholder=""
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ "ADD_PATIENT.ROOM" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="patient.room"
+        matInput
+        placeholder=""
+      />
+    </mat-form-field>
+  </div>
+
+  <div>
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ "ADD_PATIENT.DATE" | translate }}</mat-label>
+      <input
+        [disabled]="loading"
+        [(ngModel)]="surgeryDate"
+        matInput
+        [matDatepicker]="datepicker"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="datepicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>{{ "ADD_PATIENT.CANCEL" | translate }}</button>
+          <button mat-raised-button matDatepickerApply>{{ "ADD_PATIENT.SAVE" | translate }}</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
     </mat-form-field>
   </div>
 

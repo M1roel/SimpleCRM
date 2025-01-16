@@ -35,10 +35,12 @@ export class DialogAddPatientComponent {
   loading = false;
   patient = new Patient;
   birthDate: Date = new Date;
+  surgeryDate: Date = new Date;
   constructor(@Inject(Firestore) private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddPatientComponent>) {}
 
   savepatient() {
     this.patient.birthDate = this.birthDate.getTime();
+    this.patient.date = this.surgeryDate.getTime();
   
     const patientData = { ...this.patient };
   

@@ -10,7 +10,7 @@
         <td>{{ patient.firstName }} {{ patient.lastName}}</td>
         <td>{{ patient.doctor }}</td>
         <td>{{ patient.room }}</td>
-        <td>{{ patient.date }}</td>
+        <td>{{ patient.date | date:'dd.MM.yyyy' }}</td>
       </tr>
     </table>
   </mat-card>
