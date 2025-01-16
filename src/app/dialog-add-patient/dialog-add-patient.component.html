@@ -121,13 +121,13 @@
         [disabled]="loading"
         [(ngModel)]="surgeryDate"
         matInput
-        [matDatepicker]="datepicker"
+        [matDatepicker]="surgeryDatePicker"
       />
       <mat-datepicker-toggle
         matIconSuffix
-        [for]="datepicker"
+        [for]="surgeryDatePicker"
       ></mat-datepicker-toggle>
-      <mat-datepicker #datepicker>
+      <mat-datepicker #surgeryDatePicker>
         <mat-datepicker-actions>
           <button mat-button matDatepickerCancel>{{ "ADD_PATIENT.CANCEL" | translate }}</button>
           <button mat-raised-button matDatepickerApply>{{ "ADD_PATIENT.SAVE" | translate }}</button>
