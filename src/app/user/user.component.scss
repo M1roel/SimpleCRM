@@ -34,11 +34,15 @@
         padding-left: 16px;
       }
     }
-  }
 
-  th {
-    text-align: start;
-    color: rgb(255, 255, 255);    
-    padding: 16px;
+    th {
+      text-align: start;
+      color: rgb(255, 255, 255);
+      padding: 16px 0px;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+    }
   }
 }
