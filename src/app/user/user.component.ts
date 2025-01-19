@@ -6,7 +6,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
-import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
+import { DialogAddUserComponent } from '../dialogs/dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 import { TranslateModule } from '@ngx-translate/core';

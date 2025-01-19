@@ -6,14 +6,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
-import { User } from '../models/user.class';
+import { Patient } from '../../models/patient.class';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-dialog-add-user',
+  selector: 'app-dialog-add-patient',
   standalone: true,
   imports: [
     CommonModule,
@@ -26,34 +26,36 @@ import { TranslateModule } from '@ngx-translate/core';
     MatProgressBarModule,
     TranslateModule
   ],
-  templateUrl: './dialog-add-user.component.html',
-  styleUrl: './dialog-add-user.component.scss',
+  templateUrl: './dialog-add-patient.component.html',
+  styleUrl: './dialog-add-patient.component.scss',
 })
 
-export class DialogAddUserComponent {
+export class DialogAddPatientComponent {
 
   loading = false;
-  user = new User;
+  patient = new Patient;
   birthDate: Date = new Date;
-  constructor(@Inject(Firestore) private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddUserComponent>) {}
+  surgeryDate: Date = new Date;
+  constructor(@Inject(Firestore) private firestore: Firestore, public dialogRef: MatDialogRef<DialogAddPatientComponent>) {}
 
-  saveUser() {
-    this.user.birthDate = this.birthDate.getTime();
+  savepatient() {
+    this.patient.birthDate = this.birthDate.getTime();
+    this.patient.date = this.surgeryDate.getTime();
   
-    const userData = { ...this.user };
+    const patientData = { ...this.patient };
   
-    console.log('Current user is', userData);
+    console.log('Current patient is', patientData);
     this.loading = true;
   
-    const usersCollection = collection(this.firestore, 'users');
-    addDoc(usersCollection, userData)
+    const patientsCollection = collection(this.firestore, 'patients');
+    addDoc(patientsCollection, patientData)
       .then((result) => {
-        console.log('Adding user finished', result);
+        console.log('Adding patient finished', result);
         this.loading = false;
         this.dialogRef.close();
       })
       .catch((error) => {
-        console.error('Error adding user:', error);
+        console.error('Error adding patient:', error);
       });
   }
 }
