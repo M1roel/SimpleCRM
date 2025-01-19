@@ -32,9 +32,9 @@ export class DashboardComponent {
   }
 
   tiles: Tile[] = [
-    { text: 'Reports', cols: 3, rows: 1, color: '#303035' },
-    { text: 'Requests', cols: 1, rows: 2, color: '#303035' },
+    { text: 'Reports', cols: 1, rows: 1, color: '#303035' },
+    { text: 'Requests', cols: 1, rows: 1, color: '#303035' },
     { text: 'Priorities', cols: 1, rows: 1, color: '#303035' },
-    { text: 'Statistics', cols: 2, rows: 1, color: '#303035' },
+    { text: 'Statistics', cols: 1, rows: 1, color: '#303035' },
   ];
 }
