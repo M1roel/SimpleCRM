@@ -6,8 +6,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
-import { DialogAddPatientComponent } from '../dialog-add-patient/dialog-add-patient.component';
-import { Patient } from '../models/patient.class';
+import { DialogAddPatientComponent } from '../../dialogs/dialog-add-patient/dialog-add-patient.component';
+import { Patient } from '../../models/patient.class';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 import { TranslateModule } from '@ngx-translate/core';
 

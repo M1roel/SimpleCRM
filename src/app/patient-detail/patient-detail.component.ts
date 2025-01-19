@@ -7,7 +7,7 @@ import { Patient } from '../models/patient.class';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu'
-import { DialogPatientRecordComponent } from '../dialog-patient-record/dialog-patient-record.component';
+import { DialogPatientRecordComponent } from '../dialogs/dialog-patient-record/dialog-patient-record.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
