@@ -72,18 +72,22 @@
         <button mat-menu-item [matMenuTriggerFor]="cssd">
           {{ "SIDENAV.CSSD.TITLE" | translate }}
         </button>
+        <button mat-menu-item routerLink="/controlling">
+          {{ "SIDENAV.CONTROLLING" | translate }}
+        </button>
+        
       </mat-menu>
 
       <mat-menu #or="matMenu">
-        <button mat-menu-item>{{ "SIDENAV.OR.SCHEDULE" | translate }}</button>
-        <button mat-menu-item>{{ "SIDENAV.OR.RESOURCES" | translate }}</button>
-        <button mat-menu-item>{{ "SIDENAV.OR.STATISTICS" | translate }}</button>
+        <button mat-menu-item routerLink="/or/schedule">{{ "SIDENAV.OR.SCHEDULE" | translate }}</button>
+        <button mat-menu-item routerLink="/or/resources">{{ "SIDENAV.OR.RESOURCES" | translate }}</button>
+        <button mat-menu-item routerLink="/or/statistics">{{ "SIDENAV.OR.STATISTICS" | translate }}</button>
       </mat-menu>
 
       <mat-menu #cssd="matMenu">
-        <button mat-menu-item>{{ "SIDENAV.CSSD.INVENTORY" | translate }}</button>
-        <button mat-menu-item>{{ "SIDENAV.CSSD.PROCESSES" | translate }}</button>
-        <button mat-menu-item>{{ "SIDENAV.CSSD.REPORTS" | translate }}</button>
+        <button mat-menu-item routerLink="/cssd/inventory">{{ "SIDENAV.CSSD.INVENTORY" | translate }}</button>
+        <button mat-menu-item routerLink="/cssd/processes">{{ "SIDENAV.CSSD.PROCESSES" | translate }}</button>
+        <button mat-menu-item routerLink="/cssd/reports">{{ "SIDENAV.CSSD.REPORTS" | translate }}</button>
       </mat-menu>
     </mat-toolbar>
 
