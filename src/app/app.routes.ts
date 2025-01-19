@@ -9,6 +9,7 @@ import { CssdInventoryComponent } from './cssd/cssd-inventory/cssd-inventory.com
 import { CssdProcessesComponent } from './cssd/cssd-processes/cssd-processes.component';
 import { CssdReportsComponent } from './cssd/cssd-reports/cssd-reports.component';
 import { PatientDetailComponent } from './patient-detail/patient-detail.component';
+import { ControllingComponent } from './controlling/controlling.component';
 
 export const routes: Routes = [
     {path: '', component: DashboardComponent},
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path: 'or/statistics', component: OrStatisticsComponent},
     {path: 'cssd/inventory', component: CssdInventoryComponent},
     {path: 'cssd/processes', component: CssdProcessesComponent},
-    {path: 'cssd/reports', component: CssdReportsComponent}    
+    {path: 'cssd/reports', component: CssdReportsComponent},
+    {path: 'controlling', component: ControllingComponent}
 ];
