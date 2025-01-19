@@ -7,7 +7,7 @@
   .sidenav {
     width: 250px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 630px) {
       display: none;
     }
 
@@ -65,7 +65,7 @@
     .mat-toolbar-left {
       @include m.flexBox();
 
-      @media (max-width: 500px) {
+      @media (max-width: 630px) {
         display: none;
       }
 
@@ -79,7 +79,7 @@
       @include m.flexBox(row, center, center);
       cursor: pointer;
 
-      @media (max-width: 500px) {
+      @media (max-width: 630px) {
         display: none;
       }
 
@@ -92,7 +92,7 @@
     .burger-menu {
       display: none;
     
-      @media (max-width: 500px) {
+      @media (max-width: 630px) {
         display: flex;
         cursor: pointer;
       }

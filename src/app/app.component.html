@@ -51,9 +51,14 @@
         <span>{{ "SIDENAV.MOTTO" | translate }}</span>
       </div>
       <div class="lang-change">
-        <a href="" (click)="useLanguage($event, 'de')">DE</a>
-        <p>|</p>
-        <a href="" (click)="useLanguage($event, 'en')">EN</a>
+        <mat-button-toggle-group
+          [value]="currentLanguage()"
+          (change)="useLanguage($event.value)"
+          aria-label="Language toggle"
+        >
+          <mat-button-toggle value="en">EN</mat-button-toggle>
+          <mat-button-toggle value="de">DE</mat-button-toggle>
+        </mat-button-toggle-group>
       </div>
 
       <button mat-button class="burger-menu" [matMenuTriggerFor]="menus">Menu</button>
