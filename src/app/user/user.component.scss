@@ -33,6 +33,14 @@
       &:first-child {
         padding-left: 16px;
       }
+
+      @media (max-width: 630px) {
+        display: none;
+
+        &:first-child {
+          display: flex;
+        }
+       }
     }
 
     th {
@@ -43,6 +51,14 @@
       &:first-child {
         padding-left: 16px;
       }
+
+      @media (max-width: 630px) {
+        display: none;
+
+        &:first-child {
+          display: flex;
+        }
+       } 
     }
   }
 }

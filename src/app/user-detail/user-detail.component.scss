@@ -6,6 +6,10 @@
   padding: 16px;
   @include m.flexBox(row, flex-start, flex-end);
 
+  @media (max-width: 630px) {
+    @include m.flexBox(column, center, center);
+  }
+
   button {
     position: absolute;
     right: 0;
@@ -23,6 +27,11 @@
     height: 100px;
     margin-left: 32px;
     @include m.flexBox(column, center, flex-start);
+
+   @media (max-width: 630px) {
+   @include m.flexBox(column, center, center); 
+    margin-left: unset;
+   } 
 
     h2 {
       margin-bottom: 0;
