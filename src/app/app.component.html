@@ -56,6 +56,12 @@
 
       <button mat-button class="burger-menu" [matMenuTriggerFor]="menus">Menu</button>
       <mat-menu #menus="matMenu">
+        <button mat-menu-item routerLink="/">
+          {{ "SIDENAV.DASHBOARD" | translate }}
+        </button>
+        <button mat-menu-item routerLink="/user">
+          {{ "SIDENAV.USER" | translate }}
+        </button>
         <button mat-menu-item [matMenuTriggerFor]="or">
           {{ "SIDENAV.OR.TITLE" | translate }}
         </button>
