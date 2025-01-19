@@ -78,10 +78,6 @@
     .lang-change {
       @include m.flexBox(row, center, center);
       cursor: pointer;
-
-      @media (max-width: 630px) {
-        display: none;
-      }
     }
 
     .burger-menu {
