@@ -1,8 +1,21 @@
 <mat-grid-list cols="1" rowHeight="200px" class="grid">
-    @for (tile of tiles; track tile) {
-      <mat-grid-tile class="dashboard-tile"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color">{{tile.text}}</mat-grid-tile>
-    }
-  </mat-grid-list>
+  <mat-grid-tile class="dashboard-tile"
+    [colspan]="tile.cols"
+    [rowspan]="tile.rows"
+    [style.background]="tile.color" *ngFor="let tile of tiles; trackBy: trackTile">
+    <ng-container *ngIf="tile.text === 'Statistics'">
+      <h1>Processed (sterilized) sieves</h1>
+      <div style="display: block">
+        <canvas
+          baseChart
+          width="800"
+          height="200"
+          [type]="'line'"
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [legend]="lineChartLegend">
+        </canvas>
+      </div>
+    </ng-container>
+  </mat-grid-tile>
+</mat-grid-list>

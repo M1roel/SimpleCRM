@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { NgChartsModule } from 'ng2-charts';
+import { ChartConfiguration, ChartOptions } from 'chart.js';
+import { DataService } from '../services/data.service';
 
 export interface Tile {
   color: string;
@@ -13,22 +16,30 @@ export interface Tile {
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, TranslateModule, MatGridListModule],
+  imports: [CommonModule, TranslateModule, MatGridListModule, NgChartsModule],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
-  constructor(private translate: TranslateService) { }
-  /**
-     * Switches the language using the TranslateService.
-     *
-     * @param {Event} event - The DOM event triggered by user interaction.
-     * @param {string} language - The language code to switch to.
-     */
+  public lineChartData!: ChartConfiguration<'line'>['data'];
+  public lineChartOptions!: ChartOptions<'line'>;
+  public lineChartLegend = true;
+
+  constructor(private translate: TranslateService, private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.lineChartData = this.dataService.getChartData();
+    this.lineChartOptions = this.dataService.getChartOptions();
+  }
+
   useLanguage(event: Event, language: string): void {
     event.preventDefault();
     this.translate.use(language);
+  }
+
+  trackTile(index: number, tile: Tile): string {
+    return tile.text;
   }
 
   tiles: Tile[] = [
