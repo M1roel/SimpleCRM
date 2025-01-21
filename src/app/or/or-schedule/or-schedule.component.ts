@@ -26,6 +26,10 @@ export class OrScheduleComponent implements OnInit {
 
   constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) { }
 
+  /**
+   * Lifecycle hook that is called after the component is initialized.
+   * Fetches patient data from the Firestore `patients` collection and subscribes to updates.
+   */
   ngOnInit(): void {
     const patientsCollection = collection(this.firestore, 'patients');
 
@@ -35,6 +39,9 @@ export class OrScheduleComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens a dialog to add a new patient.
+   */
   openDialog() {
     this.dialog.open(DialogAddPatientComponent, {});
   }
