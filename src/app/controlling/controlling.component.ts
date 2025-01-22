@@ -12,13 +12,15 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./controlling.component.scss'],
 })
 export class ControllingComponent implements OnInit {
+  constructor(private dataService: DataService) {}
+
   title = 'processed (sterilized) sieves';
 
   public lineChartData!: ChartConfiguration<'line'>['data'];
-  public lineChartOptions!: ChartOptions<'line'>;
+  public lineChartOptions: ChartOptions<'line'> = {
+    responsive: true,
+  };
   public lineChartLegend = true;
-
-  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
     this.lineChartData = this.dataService.getChartData();
