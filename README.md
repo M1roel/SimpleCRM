@@ -1,6 +1,12 @@
-# steriNexus
+# steriNexus (CRM)
 
-**Eine kurze Beschreibung dessen, was dieses Projekt tut und welchem Zweck es dient.**
+**English:**
+
+steriNexus is a hospital management system designed to streamline communication between various departments. The platform allows for real-time patient status tracking, user management, and scheduling. It includes features for adding and editing patient and user data, managing schedules, and generating real-time charts to track key metrics. The system is built with Angular and Firestore, providing a responsive and efficient interface for hospital staff.
+
+**Deutsch:**
+
+steriNexus ist ein Krankenhausmanagement-System, das die Kommunikation zwischen verschiedenen Abteilungen optimiert. Die Plattform ermöglicht das Echtzeit-Tracking von Patientenstatus, das Verwalten von Benutzerdaten und die Planung von Terminen. Es umfasst Funktionen zum Hinzufügen und Bearbeiten von Patienten- und Benutzerdaten, das Verwalten von Zeitplänen und das Erstellen von Echtzeit-Diagrammen zur Verfolgung wichtiger Kennzahlen. Das System ist mit Angular und Firestore entwickelt und bietet eine reaktionsschnelle und effiziente Benutzeroberfläche für das Krankenhauspersonal.
 
 ## Changelog
 
