@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { DialogAddPatientComponent } from '../../dialogs/dialog-add-patient/dialog-add-patient.component';
 import { Patient } from '../../models/patient.class';
-import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection, addDoc, doc, updateDoc, collectionData } from '@angular/fire/firestore';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -25,7 +25,6 @@ export class OrScheduleComponent implements OnInit {
 
   patient = new Patient();
   allPatients: any[] = [];
-  selected = 'registered';
 
   constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) { }
 
@@ -38,7 +37,10 @@ export class OrScheduleComponent implements OnInit {
 
     collectionData(patientsCollection, { idField: 'id' }).subscribe((changes: any) => {
       console.log('Received changes from DB', changes);
-      this.allPatients = changes;
+      this.allPatients = changes.map((patient: any) => ({
+        ...patient,
+        status: patient.status || 'registered'
+      }));
     });
   }
 
@@ -47,5 +49,19 @@ export class OrScheduleComponent implements OnInit {
    */
   openDialog() {
     this.dialog.open(DialogAddPatientComponent, {});
+  }
+
+  async updateStatus(patient: any): Promise<void> {
+    if (patient.id) {
+      try {
+        const patientDocRef = doc(this.firestore, `patients/${patient.id}`);
+        await updateDoc(patientDocRef, { status: patient.status });
+        console.log(`Patient ${patient.id} status updated to: ${patient.status}`);
+      } catch (error) {
+        console.error("Error updating patient status:", error);
+      }
+    } else {
+      console.warn("Patient ID is missing. Cannot update status.");
+    }
   }
 }

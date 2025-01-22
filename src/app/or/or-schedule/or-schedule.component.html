@@ -18,7 +18,7 @@
       </td>
       <td>
         <mat-form-field>
-          <mat-select [(value)]="selected">
+          <mat-select [(value)]="patient.status" (selectionChange)="updateStatus(patient)">
             <mat-option value="registered">{{
               "PATIENT_STATUS.REGISTERED" | translate
             }}</mat-option>

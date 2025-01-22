@@ -10,6 +10,7 @@ export class Patient {
     doctor: string;
     room: string;
     date: number;
+    status: string;
 
     constructor(obj?: any) {
         this.firstName = obj ? obj.firstName : '';
@@ -23,6 +24,7 @@ export class Patient {
         this.doctor = obj ? obj.doctor : '';
         this.room = obj ? obj.roomroom : '';
         this.date = obj ? obj.date : '';
+        this.status = obj ? obj.status : '';
     }
 
     toJSON(): any {
@@ -36,7 +38,8 @@ export class Patient {
             city: this.city,
             surgery: this.surgery,
             room: this.room,
-            date: this.date
+            date: this.date,
+            status: this.status
         };
     }
 }
