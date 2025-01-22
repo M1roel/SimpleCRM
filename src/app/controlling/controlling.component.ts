@@ -22,6 +22,5 @@ export class ControllingComponent implements OnInit {
 
   ngOnInit(): void {
     this.lineChartData = this.dataService.getChartData();
-    this.lineChartOptions = this.dataService.getChartOptions();
   }
 }

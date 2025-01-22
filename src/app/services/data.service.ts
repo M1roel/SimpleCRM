@@ -73,14 +73,8 @@ export class DataService {
         ],
       };
     } catch (error) {
-      console.error('Fehler beim Abrufen der Firestore-Daten:', error);
+      console.error('No datas found:', error);
       throw error;
     }
-  }
-
-  getChartOptions() {
-    return {
-      responsive: false,
-    };
   }
 }

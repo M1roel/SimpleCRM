@@ -8,11 +8,9 @@
   >
     <ng-container *ngIf="tile.text === 'Statistics'">
       <h1>Processed (sterilized) sieves</h1>
-      <div style="display: block">
+      <div class="statistics">
         <canvas
           baseChart
-          width="800"
-          height="200"
           [type]="'line'"
           [data]="lineChartData"
           [options]="lineChartOptions"
@@ -22,11 +20,9 @@
       </div> </ng-container
     ><ng-container *ngIf="tile.text === 'Reports'">
       <h1>Users/Patients</h1>
-      <div style="display: block">
+      <div class="reports">
         <canvas
           baseChart
-          width="200"
-          height="200"
           [type]="'pie'"
           [data]="pieChartData"
           [options]="pieChartOptions"

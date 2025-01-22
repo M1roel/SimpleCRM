@@ -22,12 +22,14 @@ export interface Tile {
 })
 export class DashboardComponent implements OnInit {
   public lineChartData!: ChartConfiguration<'line'>['data'];
-  public lineChartOptions!: ChartOptions<'line'>;
+  public lineChartOptions: ChartOptions<'line'> = {
+    responsive: true,
+  };
   public lineChartLegend = true;
 
   public pieChartData!: ChartConfiguration<'pie'>['data'];
   public pieChartOptions: ChartOptions<'pie'> = {
-    responsive: false,
+    responsive: true,
   };
   public pieChartLegend = true;
   public pieChartPlugins = [];
@@ -39,7 +41,6 @@ export class DashboardComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.lineChartData = this.dataService.getChartData();
-    this.lineChartOptions = this.dataService.getChartOptions();
     this.pieChartData = await this.dataService.getPieChartData();
   }
 
