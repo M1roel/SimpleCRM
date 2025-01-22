@@ -8,7 +8,7 @@ steriNexus is a hospital management system designed to streamline communication 
 
 steriNexus ist ein Krankenhausmanagement-System, das die Kommunikation zwischen verschiedenen Abteilungen optimiert. Die Plattform ermöglicht das Echtzeit-Tracking von Patientenstatus, das Verwalten von Benutzerdaten und die Planung von Terminen. Es umfasst Funktionen zum Hinzufügen und Bearbeiten von Patienten- und Benutzerdaten, das Verwalten von Zeitplänen und das Erstellen von Echtzeit-Diagrammen zur Verfolgung wichtiger Kennzahlen. Das System ist mit Angular und Firestore entwickelt und bietet eine reaktionsschnelle und effiziente Benutzeroberfläche für das Krankenhauspersonal.
 
-## Changelog
+## Changelog (English)
 
 ### Version V0.1 (2025-01-12)
 - **feat**: Enhance user addition dialog with form fields for first name, last name, and date selection.
@@ -64,3 +64,61 @@ steriNexus ist ein Krankenhausmanagement-System, das die Kommunikation zwischen 
 - **optimized**: Form-field status now updates on Firestore for every patient.
 - **optimized**: Charts improved for better responsiveness.
 - **optimized**: Pie chart fetches real users and patient data from Firestore.
+
+
+# Changelog (Deutsch)
+
+## Version V0.1 (2025-01-12)
+- **feat**: Dialog zur Benutzererstellung erweitert, jetzt mit Formularfeldern für Vorname, Nachname und Datumswahl.
+- **feat**: Dialog zum Hinzufügen von Benutzern hinzugefügt; Öffnen des Dialogs im Benutzerkomponenten umgesetzt.
+- **optimized**: Margin für mat-icon hinzugefügt, um den Abstand im App-Komponenten zu verbessern.
+
+## Version V0.11 (2025-01-13)
+- **feat**: Abschluss der Firestore-Injektion; Benutzer-Daten-Upload jetzt verfügbar.
+- **optimized**: Aktualisierung von app.config.ts für eine verbesserte Konfiguration.
+- **optimized**: Verbesserung von dialog-and-user.component.ts für eine bessere Leistung.
+
+## Version V0.12 (2025-01-14)
+- **feat**: E-Mail-Feld zum Benutzer-Modell hinzugefügt und Dialog zur Benutzererstellung aktualisiert.
+- **optimized**: Benutzeroberfläche mit Kartenlayout verbessert und Dialog zur Benutzererstellung optimiert.
+
+## Version V0.13 (2025-01-15)
+- **feat**: Benutzer-Daten können jetzt mit der Bearbeitungsfunktion aktualisiert werden.
+- **feat**: Dropdown-Menü für die Benutzer-Detail-Komponente hinzugefügt.
+- **feat**: Angular-Kalender für die Terminplanung hinzugefügt.
+- **optimized**: Breite der Seitenleiste reduziert für bessere Reaktionsfähigkeit.
+
+## Version V0.14 (2025-01-16)
+- **feat**: Patienten-Detail und Dialog-Komponente zum Bearbeiten von Patientenakten hinzugefügt.
+- **feat**: Neue Patientenfunktion hinzugefügt.
+- **optimized**: Verbesserung der Übersetzungen und SCSS für den Patientenimport.
+
+## Version V0.15 (2025-01-17)
+- **feat**: Hinzufügen von Grid-Boxen für das Dashboard.
+- **feat**: Favicon und Text der Seitenleiste aktualisiert.
+
+## Version V0.16 (2025-01-19)
+- **feat**: Steuerungs-Komponente hinzugefügt.
+- **feat**: Router-Links für Dashboard und Benutzer zum responsiven Burger-Menü hinzugefügt.
+- **optimized**: Verbesserung des SCSS für Toolbar und Burger-Menü für bessere Reaktionsfähigkeit.
+
+## Version V0.17 (2025-01-20)
+- **feat**: Verwendung des Datenservices zur Bereitstellung von Steuerungsdaten.
+- **feat**: Hinzufügen eines Test-Diagramms zur Steuerungs-Komponente.
+- **feat**: Import von Daten ins Dashboard.
+
+## Version V0.18 (2025-01-21)
+- **feat**: Hinzufügen von JSDoc-Kommentaren für eine verbesserte Code-Dokumentation.
+
+## Version V0.19 (2025-01-22)
+- **feat**: Echtzeit-Patientenstatus auf dem Dashboard hinzugefügt.
+- **feat**: mat-form-field für Patientenstatus im OP-Plan mit mehreren Optionen hinzugefügt.
+- **feat**: Kreisdiagramm für Benutzer relativ zu Patienten hinzugefügt.
+- **optimized**: Echtzeit-Patientenstatus wird jetzt effizient auf Firestore aktualisiert.
+- **optimized**: Verbesserte Diagrammoptionen für responsive Ansichten.
+- **optimized**: Das Kreisdiagramm holt echte Benutzer- und Patientendaten aus Firestore.
+- **optimized**: Verbesserungen an Diagrammen und Formularfeldern für Echtzeit-Funktionalität.
+- **optimized**: Echtzeit-Patientenstatus auf dem Dashboard.
+- **optimized**: Formularfeld-Status wird nun für jeden Patienten in Firestore aktualisiert.
+- **optimized**: Diagramme verbessert für bessere Reaktionsfähigkeit.
+- **optimized**: Das Kreisdiagramm holt echte Benutzer- und Patientendaten aus Firestore.
