@@ -1,27 +1,78 @@
-# SimpleCRM
+steriNexus
+Eine kurze Beschreibung dessen, was dieses Projekt tut und welchem Zweck es dient.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Changelog der letzten Versionen
 
-## Development server
+Version V0.1 (2025-01-12)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+feat: Enhance user addition dialog with form fields for first name, last name, and date selection.
+feat: Add dialog for adding users; implement open dialog functionality in user component.
+optimized: Add margin to mat-icon for improved spacing in app component.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Version V0.11 (2025-01-13)
 
-## Build
+feat: Finish Firestore injection; upload user data now available.
+optimized: Update app.config.ts for improved configuration.
+optimized: Improve dialog-and-user.component.ts for better performance.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Version V0.12 (2025-01-14)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+feat: Add email field to user model and update dialog for user addition.
+optimized: Enhance user interface with card layout and improve user addition dialog.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Version V0.13 (2025-01-15)
 
-## Further help
+feat: User data can now be updated using the edit function.
+feat: Add dropdown menu for user-detail component.
+feat: Add angular calendar for scheduling.
+optimized: Reduce sidenav width for better responsiveness.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Version V0.14 (2025-01-16)
+
+feat: Add patient detail and dialog component to edit patient record.
+feat: Add new patient feature.
+optimized: Improve translation and table SCSS for patient import.
+
+
+Version V0.15 (2025-01-17)
+
+feat: Add grid boxes for dashboard.
+feat: Update favicon and sidenav text.
+
+
+Version V0.16 (2025-01-19)
+
+feat: Add controlling component.
+feat: Add router links for dashboard and user to responsive burger menu.
+optimized: Improve SCSS for toolbar and burger menu responsiveness.
+
+
+Version V0.17 (2025-01-20)
+
+feat: Use data service to provide controlling data.
+feat: Add test diagram to controlling component.
+feat: Import data to the dashboard.
+
+
+Version V0.18 (2025-01-21)
+
+feat: Add JSDoc comments for improved code documentation.
+
+
+Version V0.19 (2025-01-22)
+
+feat: Add real-time patient status on the dashboard.
+feat: Add mat-form-field for patient statuses in the OR schedule with multiple options.
+feat: Add pie chart for users relative to patients.
+optimized: Real-time patient status now updates efficiently on Firestore.
+optimized: Improve chart options for responsive views.
+optimized: Pie chart fetches real user and patient data from Firestore.
+optimized: Charts and form-field updates for real-time functionality.
+optimized: Real-time patient status on the dashboard.
+optimized: Form-field status now updates on Firestore for every patient.
+optimized: Charts improved for better responsiveness.
+optimized: Pie chart fetches real users and patient data from Firestore.
