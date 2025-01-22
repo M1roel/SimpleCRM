@@ -1,8 +1,11 @@
 <mat-grid-list cols="1" rowHeight="200px" class="grid">
-  <mat-grid-tile class="dashboard-tile"
+  <mat-grid-tile
+    class="dashboard-tile"
     [colspan]="tile.cols"
     [rowspan]="tile.rows"
-    [style.background]="tile.color" *ngFor="let tile of tiles; trackBy: trackTile">
+    [style.background]="tile.color"
+    *ngFor="let tile of tiles; trackBy: trackTile"
+  >
     <ng-container *ngIf="tile.text === 'Statistics'">
       <h1>Processed (sterilized) sieves</h1>
       <div style="display: block">
@@ -13,7 +16,23 @@
           [type]="'line'"
           [data]="lineChartData"
           [options]="lineChartOptions"
-          [legend]="lineChartLegend">
+          [legend]="lineChartLegend"
+        >
+        </canvas>
+      </div> </ng-container
+    ><ng-container *ngIf="tile.text === 'Reports'">
+      <h1>Users/Patients</h1>
+      <div style="display: block">
+        <canvas
+          baseChart
+          width="200"
+          height="200"
+          [type]="'pie'"
+          [data]="pieChartData"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
         </canvas>
       </div>
     </ng-container>

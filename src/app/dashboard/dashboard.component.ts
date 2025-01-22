@@ -18,19 +18,29 @@ export interface Tile {
   standalone: true,
   imports: [CommonModule, TranslateModule, MatGridListModule, NgChartsModule],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-
   public lineChartData!: ChartConfiguration<'line'>['data'];
   public lineChartOptions!: ChartOptions<'line'>;
   public lineChartLegend = true;
 
-  constructor(private translate: TranslateService, private dataService: DataService) { }
+  public pieChartData!: ChartConfiguration<'pie'>['data'];
+  public pieChartOptions: ChartOptions<'pie'> = {
+    responsive: false,
+  };
+  public pieChartLegend = true;
+  public pieChartPlugins = [];
+
+  constructor(
+    private translate: TranslateService,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
     this.lineChartData = this.dataService.getChartData();
     this.lineChartOptions = this.dataService.getChartOptions();
+    this.pieChartData = this.dataService.getPieChartData();
   }
 
   useLanguage(event: Event, language: string): void {

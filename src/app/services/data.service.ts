@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ChartConfiguration } from 'chart.js';
+import { ChartConfiguration, ChartOptions } from 'chart.js';
 
 @Injectable({
   providedIn: 'root',
@@ -10,8 +10,18 @@ export class DataService {
   getChartData(): ChartConfiguration<'line'>['data'] {
     return {
       labels: [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
       ],
       datasets: [
         {
@@ -29,6 +39,17 @@ export class DataService {
           tension: 0.5,
           borderColor: 'black',
           backgroundColor: 'rgba(0,255,0,0.3)',
+        },
+      ],
+    };
+  }
+
+  getPieChartData() {
+    return {
+      labels: ['Users', 'Patients'],
+      datasets: [
+        {
+          data: [300, 500],
         },
       ],
     };
