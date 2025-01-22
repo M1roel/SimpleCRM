@@ -37,10 +37,10 @@ export class DashboardComponent implements OnInit {
     private dataService: DataService
   ) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.lineChartData = this.dataService.getChartData();
     this.lineChartOptions = this.dataService.getChartOptions();
-    this.pieChartData = this.dataService.getPieChartData();
+    this.pieChartData = await this.dataService.getPieChartData();
   }
 
   useLanguage(event: Event, language: string): void {
