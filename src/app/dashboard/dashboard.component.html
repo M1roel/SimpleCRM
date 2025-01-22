@@ -17,8 +17,26 @@
           [legend]="lineChartLegend"
         >
         </canvas>
-      </div> </ng-container
-    ><ng-container *ngIf="tile.text === 'Reports'">
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="tile.text === 'Requests'">
+      <div class="requests">
+        <h2>Patient status</h2>
+        <ul *ngIf="patientStatusCounts">
+          <li>{{ "PATIENT_STATUS.REGISTERED" | translate }} : {{ patientStatusCounts["registered"] }}</li>
+          <li>{{ "PATIENT_STATUS.PREPPED" | translate }} : {{ patientStatusCounts["prepped"] }}</li>
+          <li>{{ "PATIENT_STATUS.IN_OP" | translate }} : {{ patientStatusCounts["in_op"] }}</li>
+          <li>{{ "PATIENT_STATUS.POST_OP" | translate }} : {{ patientStatusCounts["post_op"] }}</li>
+          <li>{{ "PATIENT_STATUS.RECOVERY" | translate }} : {{ patientStatusCounts["recovery"] }}</li>
+          <li>{{ "PATIENT_STATUS.STATION" | translate }} : {{ patientStatusCounts["station"] }}</li>
+          <li>{{ "PATIENT_STATUS.DISCHARGED" | translate }} : {{ patientStatusCounts["discharged"] }}</li>
+        </ul>
+        <p *ngIf="!patientStatusCounts">Loading...</p>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="tile.text === 'Reports'">
       <h2>Users/Patients</h2>
       <div class="reports">
         <canvas

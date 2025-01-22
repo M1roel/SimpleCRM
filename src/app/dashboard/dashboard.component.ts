@@ -21,6 +21,9 @@ export interface Tile {
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
+  
+  patientStatusCounts: { [key: string]: number } | null = null;
+
   constructor(
     private translate: TranslateService,
     private dataService: DataService
@@ -42,6 +45,12 @@ export class DashboardComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     this.lineChartData = this.dataService.getChartData();
     this.pieChartData = await this.dataService.getPieChartData();
+    try {
+      // Rufe die Statusdaten vom Service ab und weise sie der Eigenschaft zu
+      this.patientStatusCounts = await this.dataService.getPatientStatusCounts();
+    } catch (error) {
+      console.error('Error fetching patient status counts:', error);
+    }
   }
 
   useLanguage(event: Event, language: string): void {
@@ -58,5 +67,5 @@ export class DashboardComponent implements OnInit {
     { text: 'Requests', cols: 1, rows: 1, color: '#303035' },
     { text: 'Priorities', cols: 1, rows: 1, color: '#303035' },
     { text: 'Statistics', cols: 1, rows: 1, color: '#303035' },
-  ];
+  ];  
 }

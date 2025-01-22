@@ -77,4 +77,35 @@ export class DataService {
       throw error;
     }
   }
+
+  async getPatientStatusCounts(): Promise<{ [key: string]: number }> {
+    const patientsRef = collection(this.firestore, 'patients');
+    const patientsQuery = query(patientsRef);
+
+    try {
+      const patientsSnapshot = await getDocs(patientsQuery);
+
+      const statusCounts: { [key: string]: number } = {
+        registered: 0,
+        prepped: 0,
+        in_op: 0,
+        post_op: 0,
+        recovery: 0,
+        station: 0,
+        discharged: 0,
+      };
+
+      patientsSnapshot.forEach((doc) => {
+        const patient = doc.data();
+        if (patient['status'] in statusCounts) {
+          statusCounts[patient['status']]++;
+        }
+      });
+
+      return statusCounts;
+    } catch (error) {
+      console.error('Error fetching patient status counts:', error);
+      throw error;
+    }
+  }
 }
