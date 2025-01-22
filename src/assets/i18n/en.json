@@ -1,79 +1,80 @@
 {
-    "SIDENAV": {
-      "DASHBOARD": "Dashboard",
-      "USER": "User",
-      "OR": {
-        "TITLE": "Operating Room",
-        "SCHEDULE": "Schedule",
-        "RESOURCES": "Resources",
-        "STATISTICS": "Statistics"
-      },
-      "CSSD": {
-        "TITLE": "CSSD",
-        "INVENTORY": "Inventory",
-        "PROCESSES": "Processes",
-        "REPORTS": "Reports"
-      },
-      "MOTTO": "Optimized processes for OR and CSSD",
-      "CONTROLLING": "Controlling"
+  "SIDENAV": {
+    "DASHBOARD": "Dashboard",
+    "USER": "User",
+    "OR": {
+      "TITLE": "Operating Room",
+      "SCHEDULE": "Schedule",
+      "RESOURCES": "Resources",
+      "STATISTICS": "Statistics"
     },
-    "ADD_USER": {
-      "TITLE": "Add user",
-      "FNAME": "First name",
-      "LNAME": "Last name",
-      "MAIL": "Email",
-      "BDAY": "Birthday",
-      "CANCEL": "Cancel",
-      "SAVE": "Save",
-      "STREET": "Street + House No.",
-      "ZIP": "Zip Code",
-      "CITY": "City"
+    "CSSD": {
+      "TITLE": "CSSD",
+      "INVENTORY": "Inventory",
+      "PROCESSES": "Processes",
+      "REPORTS": "Reports"
     },
-    "EDIT_ADDRESS": {
-      "TITLE": "Edit address",
-      "CANCEL": "Cancel",
-      "SAVE": "Save",
-      "STREET": "Street + House No.",
-      "ZIP": "Zip Code",
-      "CITY": "City"
-    },
-    "EDIT_USER": {
-      "TITLE": "Edit user",
-      "FNAME": "First name",
-      "LNAME": "Last name",
-      "MAIL": "Email",
-      "BDAY": "Birthday",
-      "CANCEL": "Cancel",
-      "SAVE": "Save"
-    },
-    "USER_DETAIL": {
-      "EDIT": "Edit",
-      "ADDRESS": "Address"
-    },
-    "USER": {
-      "CITY": "City"
-    },
-    "SCHEDULE": {
-      "ROOM": "Surgery room",
-      "DOCTOR": "Surgeon",
-      "DATE": "Date of intervention"
-    },
-    "ADD_PATIENT": {
-      "TITLE": "Add patient",
-      "FNAME": "First name",
-      "LNAME": "Last name",
-      "MAIL": "Email",
-      "BDAY": "Birthday",
-      "CANCEL": "Cancel",
-      "SAVE": "Save",
-      "STREET": "Street + House No.",
-      "ZIP": "Zip Code",
-      "CITY": "City",
-      "ROOM": "Surgery room",
-      "DOCTOR": "Surgeon",
-      "DATE": "Date of intervention"
-    },
-    "PATIENT_STATUS": {
+    "MOTTO": "Optimized processes for OR and CSSD",
+    "CONTROLLING": "Controlling"
+  },
+  "ADD_USER": {
+    "TITLE": "Add user",
+    "FNAME": "First name",
+    "LNAME": "Last name",
+    "MAIL": "Email",
+    "BDAY": "Birthday",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "STREET": "Street + House No.",
+    "ZIP": "Zip Code",
+    "CITY": "City"
+  },
+  "EDIT_ADDRESS": {
+    "TITLE": "Edit address",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "STREET": "Street + House No.",
+    "ZIP": "Zip Code",
+    "CITY": "City"
+  },
+  "EDIT_USER": {
+    "TITLE": "Edit user",
+    "FNAME": "First name",
+    "LNAME": "Last name",
+    "MAIL": "Email",
+    "BDAY": "Birthday",
+    "CANCEL": "Cancel",
+    "SAVE": "Save"
+  },
+  "USER_DETAIL": {
+    "EDIT": "Edit",
+    "ADDRESS": "Address"
+  },
+  "USER": {
+    "CITY": "City"
+  },
+  "SCHEDULE": {
+    "ROOM": "Surgery room",
+    "DOCTOR": "Surgeon",
+    "DATE": "Date of intervention"
+  },
+  "ADD_PATIENT": {
+    "TITLE": "Add patient",
+    "FNAME": "First name",
+    "LNAME": "Last name",
+    "MAIL": "Email",
+    "BDAY": "Birthday",
+    "CANCEL": "Cancel",
+    "SAVE": "Save",
+    "STREET": "Street + House No.",
+    "ZIP": "Zip Code",
+    "CITY": "City",
+    "ROOM": "Surgery room",
+    "DOCTOR": "Surgeon",
+    "DATE": "Date of intervention"
+  },
+  "PATIENT_STATUS": {
+    "HEADLINE": "Patient status",
     "REGISTERED": "Registered",
     "PREPPED": "Prepped",
     "IN_OP": "In operation",
@@ -81,6 +82,11 @@
     "RECOVERY": "Recovery room",
     "STATION": "On ward",
     "DISCHARGED": "Discharged"
-    }
+  },
+  "REPORTS": {
+    "HEADLINE": "User/Patient ratio"
+  },
+  "STATISTICS": {
+    "HEADLINE": "Surgeries per month"
   }
-  
+}

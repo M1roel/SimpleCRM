@@ -74,6 +74,7 @@
     "DATE": "Eingriffsdatum"
   },
   "PATIENT_STATUS": {
+    "HEADLINE": "Patientenstatus",
     "REGISTERED": "Angemeldet",
     "PREPPED": "Einschleusen",
     "IN_OP": "Im OP",
@@ -81,5 +82,11 @@
     "RECOVERY": "Aufwachraum",
     "STATION": "Auf Station",
     "DISCHARGED": "Entlassen"
+  },
+  "REPORTS": {
+    "HEADLINE": "Benutzer/Patienten Verhältnis"
+  },
+  "STATISTICS": {
+    "HEADLINE": "OP-Eingriffe pro Monat"
   }
 }

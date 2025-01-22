@@ -46,7 +46,6 @@ export class DashboardComponent implements OnInit {
     this.lineChartData = this.dataService.getChartData();
     this.pieChartData = await this.dataService.getPieChartData();
     try {
-      // Rufe die Statusdaten vom Service ab und weise sie der Eigenschaft zu
       this.patientStatusCounts = await this.dataService.getPatientStatusCounts();
     } catch (error) {
       console.error('Error fetching patient status counts:', error);
