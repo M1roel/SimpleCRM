@@ -10,12 +10,14 @@ import { DialogAddPatientComponent } from '../../dialogs/dialog-add-patient/dial
 import { Patient } from '../../models/patient.class';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-or-schedule',
   standalone: true,
   imports: [MatIconModule, MatButtonModule, MatTooltipModule, MatDialogModule, MatCardModule, CommonModule,
-    RouterModule, TranslateModule],
+    RouterModule, TranslateModule, MatSelectModule, MatFormFieldModule],
   templateUrl: './or-schedule.component.html',
   styleUrl: './or-schedule.component.scss'
 })
@@ -23,6 +25,7 @@ export class OrScheduleComponent implements OnInit {
 
   patient = new Patient();
   allPatients: any[] = [];
+  selected = 'registered';
 
   constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) { }
 

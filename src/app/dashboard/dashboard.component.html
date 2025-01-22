@@ -7,7 +7,7 @@
     *ngFor="let tile of tiles; trackBy: trackTile"
   >
     <ng-container *ngIf="tile.text === 'Statistics'">
-      <h1>Surgeries</h1>
+      <h2>Surgeries</h2>
       <div class="statistics">
         <canvas
           baseChart
@@ -19,7 +19,7 @@
         </canvas>
       </div> </ng-container
     ><ng-container *ngIf="tile.text === 'Reports'">
-      <h1>Users/Patients</h1>
+      <h2>Users/Patients</h2>
       <div class="reports">
         <canvas
           baseChart

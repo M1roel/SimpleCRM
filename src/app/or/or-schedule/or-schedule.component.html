@@ -1,28 +1,59 @@
 <mat-card>
-    <table class="patient-table">
-      <tr>
-        <th>Name</th>
-        <th>{{ "SCHEDULE.DOCTOR" | translate }}</th>
-        <th>{{ "SCHEDULE.ROOM" | translate }}</th>
-        <th>{{ "SCHEDULE.DATE" | translate }}</th>
-      </tr>
-      <tr *ngFor="let patient of allPatients" [routerLink]="['/patients/' + patient.id]">
-        <td>{{ patient.firstName }} {{ patient.lastName}}</td>
-        <td>{{ patient.doctor }}</td>
-        <td>{{ patient.room }}</td>
-        <td>{{ patient.date | date:'dd.MM.yyyy' }}</td>
-      </tr>
-    </table>
-  </mat-card>
-  
-  <button
-    (click)="openDialog()"
-    class="add-patient-btn"
-    mat-fab
-    aria-label="button with a add icon"
-    matTooltip="Add patient"
-    matTooltipPosition="above"
-  >
-    <mat-icon>add</mat-icon>
-  </button>
-  
+  <table class="patient-table">
+    <tr>
+      <th>Name</th>
+      <th>{{ "SCHEDULE.DOCTOR" | translate }}</th>
+      <th>{{ "SCHEDULE.ROOM" | translate }}</th>
+      <th>{{ "SCHEDULE.DATE" | translate }}</th>
+      <th>Status</th>
+    </tr>
+    <tr *ngFor="let patient of allPatients">
+      <td [routerLink]="['/patients/' + patient.id]">
+        {{ patient.firstName }} {{ patient.lastName }}
+      </td>
+      <td [routerLink]="['/patients/' + patient.id]">{{ patient.doctor }}</td>
+      <td [routerLink]="['/patients/' + patient.id]">{{ patient.room }}</td>
+      <td [routerLink]="['/patients/' + patient.id]">
+        {{ patient.date | date : "dd.MM.yyyy" }}
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select [(value)]="selected">
+            <mat-option value="registered">{{
+              "PATIENT_STATUS.REGISTERED" | translate
+            }}</mat-option>
+            <mat-option value="prepped">{{
+              "PATIENT_STATUS.PREPPED" | translate
+            }}</mat-option>
+            <mat-option value="in_op">{{
+              "PATIENT_STATUS.IN_OP" | translate
+            }}</mat-option>
+            <mat-option value="post_op">{{
+              "PATIENT_STATUS.POST_OP" | translate
+            }}</mat-option>
+            <mat-option value="recovery">{{
+              "PATIENT_STATUS.RECOVERY" | translate
+            }}</mat-option>
+            <mat-option value="station">{{
+              "PATIENT_STATUS.STATION" | translate
+            }}</mat-option>
+            <mat-option value="discharged">{{
+              "PATIENT_STATUS.DISCHARGED" | translate
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</mat-card>
+
+<button
+  (click)="openDialog()"
+  class="add-patient-btn"
+  mat-fab
+  aria-label="button with a add icon"
+  matTooltip="Add patient"
+  matTooltipPosition="above"
+>
+  <mat-icon>add</mat-icon>
+</button>

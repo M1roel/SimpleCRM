@@ -1,77 +1,85 @@
 {
-    "SIDENAV": {
-      "DASHBOARD": "Übersicht",
-      "USER": "Benutzer",
-      "OR": {
-        "TITLE": "Operationsraum",
-        "SCHEDULE": "Zeitplan",
-        "RESOURCES": "Ressourcen",
-        "STATISTICS": "Statistiken"
-      },
-      "CSSD": {
-        "TITLE": "Sterilgutversorgung",
-        "INVENTORY": "Inventar",
-        "PROCESSES": "Prozesse",
-        "REPORTS": "Berichte"
-      },
-      "MOTTO": "Optimierte Prozesse für OP und AEMP",
-      "CONTROLLING": "Controlling"
+  "SIDENAV": {
+    "DASHBOARD": "Übersicht",
+    "USER": "Benutzer",
+    "OR": {
+      "TITLE": "Operationsraum",
+      "SCHEDULE": "Zeitplan",
+      "RESOURCES": "Ressourcen",
+      "STATISTICS": "Statistiken"
     },
-    "ADD_USER": {
-      "TITLE": "Benutzer hinzufügen",
-      "FNAME": "Vorname",
-      "LNAME": "Nachname",
-      "MAIL": "Email",
-      "BDAY": "Geburtstag",
-      "CANCEL": "Abbruch",
-      "SAVE": "Speichern",
-      "STREET": "Straße + Hausnummer",
-      "ZIP": "Postleitzahl",
-      "CITY": "Stadt"
+    "CSSD": {
+      "TITLE": "Sterilgutversorgung",
+      "INVENTORY": "Inventar",
+      "PROCESSES": "Prozesse",
+      "REPORTS": "Berichte"
     },
-    "EDIT_ADDRESS": {
-      "TITLE": "Adresse bearbeiten",
-      "CANCEL": "Abbruch",
-      "SAVE": "Speichern",
-      "STREET": "Straße + Hausnummer",
-      "ZIP": "Postleitzahl",
-      "CITY": "Stadt"
-    },
-    "EDIT_USER": {
-      "TITLE": "Benutzer bearbeiten",
-      "FNAME": "Vorname",
-      "LNAME": "Nachname",
-      "MAIL": "Email",
-      "BDAY": "Geburtstag",
-      "CANCEL": "Abbruch",
-      "SAVE": "Speichern"
-    },
-    "USER_DETAIL": {
-      "EDIT": "Bearbeiten",
-      "ADDRESS": "Adresse"
-    },
-    "USER": {
-      "CITY": "Stadt"
-    },
-    "SCHEDULE": {
-      "ROOM": "OP-Saal",
-      "DOCTOR": "Operateur",
-      "DATE": "Eingriffsdatum"
-    },
-    "ADD_PATIENT": {
-      "TITLE": "Patient hinzufügen",
-      "FNAME": "Vorname",
-      "LNAME": "Nachname",
-      "MAIL": "Email",
-      "BDAY": "Geburtstag",
-      "CANCEL": "Abbruch",
-      "SAVE": "Speichern",
-      "STREET": "Straße + Hausnummer",
-      "ZIP": "Postleitzahl",
-      "CITY": "Stadt",
-      "ROOM": "OP-Saal",
-      "DOCTOR": "Operateur",
-      "DATE": "Eingriffsdatum"
-    }
+    "MOTTO": "Optimierte Prozesse für OP und AEMP",
+    "CONTROLLING": "Controlling"
+  },
+  "ADD_USER": {
+    "TITLE": "Benutzer hinzufügen",
+    "FNAME": "Vorname",
+    "LNAME": "Nachname",
+    "MAIL": "Email",
+    "BDAY": "Geburtstag",
+    "CANCEL": "Abbruch",
+    "SAVE": "Speichern",
+    "STREET": "Straße + Hausnummer",
+    "ZIP": "Postleitzahl",
+    "CITY": "Stadt"
+  },
+  "EDIT_ADDRESS": {
+    "TITLE": "Adresse bearbeiten",
+    "CANCEL": "Abbruch",
+    "SAVE": "Speichern",
+    "STREET": "Straße + Hausnummer",
+    "ZIP": "Postleitzahl",
+    "CITY": "Stadt"
+  },
+  "EDIT_USER": {
+    "TITLE": "Benutzer bearbeiten",
+    "FNAME": "Vorname",
+    "LNAME": "Nachname",
+    "MAIL": "Email",
+    "BDAY": "Geburtstag",
+    "CANCEL": "Abbruch",
+    "SAVE": "Speichern"
+  },
+  "USER_DETAIL": {
+    "EDIT": "Bearbeiten",
+    "ADDRESS": "Adresse"
+  },
+  "USER": {
+    "CITY": "Stadt"
+  },
+  "SCHEDULE": {
+    "ROOM": "OP-Saal",
+    "DOCTOR": "Operateur",
+    "DATE": "Eingriffsdatum"
+  },
+  "ADD_PATIENT": {
+    "TITLE": "Patient hinzufügen",
+    "FNAME": "Vorname",
+    "LNAME": "Nachname",
+    "MAIL": "Email",
+    "BDAY": "Geburtstag",
+    "CANCEL": "Abbruch",
+    "SAVE": "Speichern",
+    "STREET": "Straße + Hausnummer",
+    "ZIP": "Postleitzahl",
+    "CITY": "Stadt",
+    "ROOM": "OP-Saal",
+    "DOCTOR": "Operateur",
+    "DATE": "Eingriffsdatum"
+  },
+  "PATIENT_STATUS": {
+    "REGISTERED": "Angemeldet",
+    "PREPPED": "Einschleusen",
+    "IN_OP": "Im OP",
+    "POST_OP": "Ausschleusen",
+    "RECOVERY": "Aufwachraum",
+    "STATION": "Auf Station",
+    "DISCHARGED": "Entlassen"
   }
-  
+}

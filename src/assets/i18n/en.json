@@ -72,6 +72,15 @@
       "ROOM": "Surgery room",
       "DOCTOR": "Surgeon",
       "DATE": "Date of intervention"
+    },
+    "PATIENT_STATUS": {
+    "REGISTERED": "Registered",
+    "PREPPED": "Prepped",
+    "IN_OP": "In operation",
+    "POST_OP": "Post operation",
+    "RECOVERY": "Recovery room",
+    "STATION": "On ward",
+    "DISCHARGED": "Discharged"
     }
   }
   
