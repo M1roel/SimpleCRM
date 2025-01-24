@@ -65,7 +65,7 @@ export class DialogAddUserComponent {
       { value: 'physiotherapist', viewValue: this.translate.instant('ADD_USER.ROLES.PHYSIOTHERAPIST') },
       { value: 'lab-technician', viewValue: this.translate.instant('ADD_USER.ROLES.LAB_TECHNICIAN') }
     ];
-    this.selectedRole = this.roles[0]?.value; // Standardmäßig die erste Rolle auswählen
+    this.selectedRole = this.roles[0]?.value;
   }
 
   saveUser() {
