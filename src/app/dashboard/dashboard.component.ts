@@ -21,7 +21,6 @@ export interface Tile {
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  
   patientStatusCounts: { [key: string]: number } | null = null;
 
   constructor(
@@ -38,6 +37,22 @@ export class DashboardComponent implements OnInit {
   public pieChartData!: ChartConfiguration<'pie'>['data'];
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        position: 'right',
+        labels: {
+          boxWidth: 10,
+          padding: 10,
+          font: {
+            size: 12,
+          },
+        },
+      },
+      title: {
+        display: true,
+      },
+    },
   };
   public pieChartLegend = true;
   public pieChartPlugins = [];
@@ -46,7 +61,8 @@ export class DashboardComponent implements OnInit {
     this.lineChartData = this.dataService.getChartData();
     this.pieChartData = await this.dataService.getPieChartData();
     try {
-      this.patientStatusCounts = await this.dataService.getPatientStatusCounts();
+      this.patientStatusCounts =
+        await this.dataService.getPatientStatusCounts();
     } catch (error) {
       console.error('Error fetching patient status counts:', error);
     }
@@ -66,5 +82,5 @@ export class DashboardComponent implements OnInit {
     { text: 'Requests', cols: 1, rows: 1, color: '#303035' },
     { text: 'Priorities', cols: 1, rows: 1, color: '#303035' },
     { text: 'Statistics', cols: 1, rows: 1, color: '#303035' },
-  ];  
+  ];
 }
