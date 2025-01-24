@@ -27,7 +27,20 @@
     "SAVE": "Speichern",
     "STREET": "Straße + Hausnummer",
     "ZIP": "Postleitzahl",
-    "CITY": "Stadt"
+    "CITY": "Stadt",
+    "ROLES": {
+      "ROLE": "Funktion",
+      "DOCTOR": "Arzt / Ärztin",
+      "NURSE": "Krankenschwester / Pflegekraft",
+      "CONTROLLER": "Controller",
+      "AEMP": "AEMP-Mitarbeiter",
+      "OP_MANAGER": "OP-Leitung",
+      "ADMIN_STAFF": "Verwaltungsmitarbeiter",
+      "IT_SUPPORT": "Technischer Support / IT-Administrator",
+      "QUALITY_MANAGER": "Qualitätsmanager",
+      "PHYSIOTHERAPIST": "Physiotherapeut",
+      "LAB_TECHNICIAN": "Labor-Mitarbeiter"
+    }
   },
   "EDIT_ADDRESS": {
     "TITLE": "Adresse bearbeiten",

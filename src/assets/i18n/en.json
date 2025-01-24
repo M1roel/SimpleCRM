@@ -27,7 +27,20 @@
     "SAVE": "Save",
     "STREET": "Street + House No.",
     "ZIP": "Zip Code",
-    "CITY": "City"
+    "CITY": "City",
+    "ROLES": {
+      "ROLE": "Role",
+      "DOCTOR": "Doctor",
+      "NURSE": "Nurse",
+      "CONTROLLER": "Controller",
+      "AEMP": "CSSD Staff",
+      "OP_MANAGER": "OR Manager",
+      "ADMIN_STAFF": "Administrative Staff",
+      "IT_SUPPORT": "IT Support / Administrator",
+      "QUALITY_MANAGER": "Quality Manager",
+      "PHYSIOTHERAPIST": "Physiotherapist",
+      "LAB_TECHNICIAN": "Lab Technician"
+    }
   },
   "EDIT_ADDRESS": {
     "TITLE": "Edit address",
