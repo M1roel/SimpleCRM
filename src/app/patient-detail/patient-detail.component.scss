@@ -1,0 +1,10 @@
+.delete-patient {
+    cursor: pointer;
+    text-align: center;
+    padding: 16px;
+  
+    &:hover {
+      color: red;
+      background-color: rgb(56, 56, 56) !important;
+    }
+  }
