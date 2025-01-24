@@ -109,7 +109,7 @@
     "DELETE_CLOSE": "Close"
   },
   "REPORTS": {
-    "HEADLINE": "User/Patient ratio"
+    "HEADLINE": "User role ratio"
   },
   "STATISTICS": {
     "HEADLINE": "Surgeries per month"

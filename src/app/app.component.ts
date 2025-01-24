@@ -43,9 +43,8 @@ export class AppComponent {
     this.translate.use(this.currentLanguage());
   }
 
-  // Methode zum Umschalten der Sprache
   useLanguage(language: string): void {
-    this.currentLanguage.set(language); // Setzt das Signal
-    this.translate.use(language); // Aktualisiert die Übersetzung
+    this.currentLanguage.set(language);
+    this.translate.use(language);
   }
 }

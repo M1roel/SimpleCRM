@@ -11,7 +11,7 @@ export class DataService {
 
   private firestore: Firestore = inject(Firestore);
 
-  constructor() {}
+  constructor() { }
 
   getChartData(): ChartConfiguration<'line'>['data'] {
     return {
@@ -52,28 +52,38 @@ export class DataService {
 
   async getPieChartData(): Promise<any> {
     const usersRef = collection(this.firestore, 'users');
-    const patientsRef = collection(this.firestore, 'patients');
-
-    const usersQuery = query(usersRef);
-    const patientsQuery = query(patientsRef);
 
     try {
-      const usersSnapshot = await getDocs(usersQuery);
-      const patientsSnapshot = await getDocs(patientsQuery);
+      const usersSnapshot = await getDocs(usersRef);
 
-      const usersCount = usersSnapshot.size;
-      const patientsCount = patientsSnapshot.size;
+      const roleCounts: { [key: string]: number } = {};
+
+      usersSnapshot.forEach((doc) => {
+        const user = doc.data();
+        const role = user['role'];
+
+        if (role) {
+          if (roleCounts[role]) {
+            roleCounts[role]++;
+          } else {
+            roleCounts[role] = 1;
+          }
+        }
+      });
+
+      const labels = Object.keys(roleCounts);
+      const data = Object.values(roleCounts);
 
       return {
-        labels: ['Users', 'Patients'],
+        labels: labels,
         datasets: [
           {
-            data: [usersCount, patientsCount],
+            data: data,
           },
         ],
       };
     } catch (error) {
-      console.error('No datas found:', error);
+      console.error('Error fetching user roles:', error);
       throw error;
     }
   }
