@@ -6,7 +6,7 @@ import { MatCardModule } from '@angular/material/card';
 import { User } from '../models/user.class';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
 import { DialogEditAddressComponent } from '../dialogs/dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialogs/dialog-edit-user/dialog-edit-user.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';

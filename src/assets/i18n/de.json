@@ -100,6 +100,14 @@
     "STATION": "Auf Station",
     "DISCHARGED": "Entlassen"
   },
+  "PATIENT_DETAIL": {
+    "EDIT": "Bearbeiten",
+    "ADDRESS": "Adresse",
+    "DELETE": "Patient löschen",
+    "DELETE_PERM": "Dauerhaft löschen",
+    "DELETE_SUCCESS": "Patient erfolgreich gelöscht",
+    "DELETE_CLOSE": "Schließen"
+  },
   "REPORTS": {
     "HEADLINE": "Benutzer/Patienten Verhältnis"
   },

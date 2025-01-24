@@ -1,1 +1,9 @@
-<p>patient-detail works!</p>
+<button mat-raised-button [matMenuTriggerFor]="deleteUserMenu" class="mt-32 delete-user">
+    {{ "PATIENT_DETAIL.DELETE" | translate }}
+  </button>
+  
+  <mat-menu #deleteUserMenu="matMenu">
+    <button mat-menu-item (click)="deletePatient()">
+      {{ "PATIENT_DETAIL.DELETE_PERM" | translate }}
+    </button>
+  </mat-menu>
