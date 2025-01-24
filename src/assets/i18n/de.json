@@ -61,7 +61,11 @@
   },
   "USER_DETAIL": {
     "EDIT": "Bearbeiten",
-    "ADDRESS": "Adresse"
+    "ADDRESS": "Adresse",
+    "DELETE": "Benutzer löschen",
+    "DELETE_PERM": "Dauerhaft löschen",
+    "DELETE_SUCCESS": "Benutzer erfolgreich gelöscht",
+    "DELETE_CLOSE": "Schließen"
   },
   "USER": {
     "CITY": "Stadt"

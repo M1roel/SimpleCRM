@@ -61,7 +61,11 @@
   },
   "USER_DETAIL": {
     "EDIT": "Edit",
-    "ADDRESS": "Address"
+    "ADDRESS": "Address",
+    "DELETE": "Delete user",
+    "DELETE_PERM": "Delete permanently",
+    "DELETE_SUCCESS": "User successfully deleted",
+    "DELETE_CLOSE": "Close"
   },
   "USER": {
     "CITY": "City"
