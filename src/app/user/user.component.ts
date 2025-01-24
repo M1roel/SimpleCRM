@@ -39,4 +39,23 @@ export class UserComponent implements OnInit {
   openDialog() {
     this.dialog.open(DialogAddUserComponent, {});
   }
+
+  getRoleViewValue(role: string): string {
+    const roles = [
+      { value: 'doctor', viewValue: 'Doctor' },
+      { value: 'nurse', viewValue: 'Nurse' },
+      { value: 'controller', viewValue: 'Controller' },
+      { value: 'aemp', viewValue: 'AEMP' },
+      { value: 'op-manager', viewValue: 'OP Manager' },
+      { value: 'admin-staff', viewValue: 'Admin Staff' },
+      { value: 'it-support', viewValue: 'IT Support' },
+      { value: 'quality-manager', viewValue: 'Quality Manager' },
+      { value: 'physiotherapist', viewValue: 'Physiotherapist' },
+      { value: 'lab-technician', viewValue: 'Lab Technician' }
+    ];
+  
+    const roleObj = roles.find(r => r.value === role);
+    return roleObj ? roleObj.viewValue : role;
+  }
+  
 }

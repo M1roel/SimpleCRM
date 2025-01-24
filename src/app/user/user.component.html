@@ -3,12 +3,12 @@
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>{{ "USER.CITY" | translate }}</th>
+      <th>{{ "ADD_USER.ROLES.ROLE" | translate }}</th>
     </tr>
     <tr *ngFor="let user of allUsers" [routerLink]="['/user/' + user.id]">
       <td>{{ user.firstName }} {{ user.lastName}}</td>
       <td>{{ user.email }}</td>
-      <td>{{ user.city }}</td>
+      <td>{{ getRoleViewValue(user.role) }}</td>
     </tr>
   </table>
 </mat-card>
