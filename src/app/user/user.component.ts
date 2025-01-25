@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { DialogAddUserComponent } from '../dialogs/dialog-add-user/dialog-add-user.component';
 import { User } from '../models/user.class';
 import { Firestore, collection, addDoc, collectionData } from '@angular/fire/firestore';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -25,7 +25,7 @@ export class UserComponent implements OnInit {
   user = new User();
   allUsers: any[] = [];
 
-  constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) { }
+  constructor(public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore, @Inject(TranslateService) private translate: TranslateService) { }
 
   ngOnInit(): void {
     const usersCollection = collection(this.firestore, 'users');
@@ -42,16 +42,16 @@ export class UserComponent implements OnInit {
 
   getRoleViewValue(role: string): string {
     const roles = [
-      { value: 'doctor', viewValue: 'Doctor' },
-      { value: 'nurse', viewValue: 'Nurse' },
-      { value: 'controller', viewValue: 'Controller' },
-      { value: 'aemp', viewValue: 'AEMP' },
-      { value: 'op-manager', viewValue: 'OP Manager' },
-      { value: 'admin-staff', viewValue: 'Admin Staff' },
-      { value: 'it-support', viewValue: 'IT Support' },
-      { value: 'quality-manager', viewValue: 'Quality Manager' },
-      { value: 'physiotherapist', viewValue: 'Physiotherapist' },
-      { value: 'lab-technician', viewValue: 'Lab Technician' }
+      { value: 'doctor', viewValue: this.translate.instant('ADD_USER.ROLES.DOCTOR') },
+      { value: 'nurse', viewValue: this.translate.instant('ADD_USER.ROLES.NURSE') },
+      { value: 'controller', viewValue: this.translate.instant('ADD_USER.ROLES.CONTROLLER') },
+      { value: 'aemp', viewValue: this.translate.instant('ADD_USER.ROLES.AEMP') },
+      { value: 'op-manager', viewValue: this.translate.instant('ADD_USER.ROLES.OP_MANAGER') },
+      { value: 'admin-staff', viewValue: this.translate.instant('ADD_USER.ROLES.ADMIN_STAFF') },
+      { value: 'it-support', viewValue: this.translate.instant('ADD_USER.ROLES.IT_SUPPORT') },
+      { value: 'quality-manager', viewValue: this.translate.instant('ADD_USER.ROLES.QUALITY_MANAGER') },
+      { value: 'physiotherapist', viewValue: this.translate.instant('ADD_USER.ROLES.PHYSIOTHERAPIST') },
+      { value: 'lab-technician', viewValue: this.translate.instant('ADD_USER.ROLES.LAB_TECHNICIAN') }
     ];
   
     const roleObj = roles.find(r => r.value === role);
