@@ -7,7 +7,7 @@
     *ngFor="let tile of tiles; trackBy: trackTile"
   >
 
-  <ng-container *ngIf="tile.text === 'Reports'">
+  <ng-container *ngIf="tile.text === 'Priorities'">
     <h2>{{ "REPORTS.HEADLINE" | translate }}</h2>
     <div class="reports">
       <canvas
